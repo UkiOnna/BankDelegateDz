@@ -36,7 +36,7 @@ namespace BanksSystem
             double result;
             if (double.TryParse(putBox.Text, out result))
             {
-                account.Put(result);
+                account.Put(result,user);
             }
             else
             {
@@ -47,9 +47,9 @@ namespace BanksSystem
         private void LossMoneyClick(object sender, RoutedEventArgs e)
         {
             double result;
-            if (double.TryParse(putBox.Text, out result))
+            if (double.TryParse(lostBox.Text, out result))
             {
-                account.Withdraw(result);
+                account.Withdraw(result,user);
             }
             else
             {
@@ -57,17 +57,26 @@ namespace BanksSystem
             }
         }
 
-        private static string AddMoney(double sum, Account personSum)
+        private static string AddMoney(double sum, Account personSum,User user)
         {
             personSum.Sum += sum;
+            
             using (var context = new BankContext())
             {
                 //сделать чтобы контекст сохранялся с измененой суммой
+                for(int i = 0; i < context.Users.Count(); i++)
+                {
+                    if (context.Users.ToList()[i].Id == user.Id)
+                    {
+                        context.Users.ToList()[i].Sum = personSum.Sum;
+                    }
+                }
+                context.SaveChanges();
             }
             return ($"Сумма {sum} добавлена на счет");
         }
 
-        private static string LossMoney(double sum, Account personSum)
+        private static string LossMoney(double sum, Account personSum,User user)
         {
             if (sum <= personSum.Sum)
             {
@@ -76,6 +85,14 @@ namespace BanksSystem
                 using(var context=new BankContext())
                 {
                     //сделать чтобы контекст сохранялся с измененой суммой
+                    for (int i = 0; i < context.Users.Count(); i++)
+                    {
+                        if (context.Users.ToList()[i].Id == user.Id)
+                        {
+                            context.Users.ToList()[i].Sum = personSum.Sum;
+                        }
+                    }
+                    context.SaveChanges();
                 }
                 return ($"Сумма {sum} была снята со счета");
             }

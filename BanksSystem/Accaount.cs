@@ -12,7 +12,7 @@ namespace BanksSystem
     {
         public double Sum { get; set; } // Переменная для хранения суммы
 
-        public delegate string AccountStateHandler(double x,Account acc);
+        public delegate string AccountStateHandler(double x,Account acc,User u);
 
         private AccountStateHandler delWithDraw;
         private AccountStateHandler delPut;
@@ -28,16 +28,16 @@ namespace BanksSystem
 
         }
 
-        public void Put(double sum)
+        public void Put(double sum,User user)
         {
-            delPut.BeginInvoke(sum, this, new AsyncCallback(asyncResult => MessageBox.Show(delPut.EndInvoke(asyncResult))), null);
+            delPut.BeginInvoke(sum, this,user, new AsyncCallback(asyncResult => MessageBox.Show(delPut.EndInvoke(asyncResult))), null);
             
             
         }
 
-        public void Withdraw(double sum)
+        public void Withdraw(double sum,User user)
         {
-            IAsyncResult result =  delWithDraw.BeginInvoke(sum, this, new AsyncCallback(asyncResult => MessageBox.Show(delWithDraw.EndInvoke(asyncResult))), null);
+            IAsyncResult result =  delWithDraw.BeginInvoke(sum, this,user, new AsyncCallback(asyncResult => MessageBox.Show(delWithDraw.EndInvoke(asyncResult))), null);
         }
     }
 }
