@@ -1,0 +1,5 @@
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\JsonFiles\bin\Debug\JsonFiles.dll
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\JsonFiles\bin\Debug\JsonFiles.pdb
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\JsonFiles\obj\Debug\JsonFiles.csprojResolveAssemblyReference.cache
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\JsonFiles\obj\Debug\JsonFiles.dll
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\JsonFiles\obj\Debug\JsonFiles.pdb

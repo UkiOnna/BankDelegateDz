@@ -1,6 +1,9 @@
-﻿using System;
+﻿using JsonFiles;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,6 +29,8 @@ namespace BanksSystem
         {
             InitializeComponent();
             this.window = window;
+
+          
         }
 
 
@@ -48,7 +53,7 @@ namespace BanksSystem
                    // User user = service.SignIn(loginBox.Text, passwordBox.Password);
                     if (isOk != false)
                     {
-                        window.Content = new MainPage(user);
+                        window.Content = new MainPage(user,window);
                     }
                     else
                     {

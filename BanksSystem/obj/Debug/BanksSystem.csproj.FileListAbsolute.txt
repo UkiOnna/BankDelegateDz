@@ -23,3 +23,10 @@ c:\users\сикировт\documents\visual studio 2017\Projects\BanksSystem\Bank
 c:\users\сикировт\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\obj\Debug\MainPage.baml
 c:\users\сикировт\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\obj\Debug\SignUpPage.g.cs
 c:\users\сикировт\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\obj\Debug\SignUpPage.baml
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\obj\Debug\ExchangeRatePage.g.cs
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\obj\Debug\ExchangeRatePage.baml
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\bin\Debug\JsonFiles.dll
+C:\Users\СикировТ\documents\visual studio 2017\Projects\BanksSystem\BanksSystem\bin\Debug\JsonFiles.pdb

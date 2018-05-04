@@ -23,9 +23,11 @@ namespace BanksSystem
     {
         public Account account;
         public User user;
-        public MainPage(User user)
+        Window window;
+        public MainPage(User user,Window win)
         {
             InitializeComponent();
+            window = win;
             this.user = user;
             moneyUser.Text = user.Sum.ToString();
             account = new Account(user.Sum);
@@ -112,6 +114,11 @@ namespace BanksSystem
                 return ($"У вас недостаточно денег для совершении операции");
 
             }
+        }
+
+        private void ExchangeRatesShowClick(object sender, RoutedEventArgs e)
+        {
+            window.Content = new ExchangeRatePage(window); 
         }
     }
 }

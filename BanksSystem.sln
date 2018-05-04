@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanksSystem", "BanksSystem\BanksSystem.csproj", "{7E6FE7E1-EE9D-4A1E-A373-0E3302FD7C2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonFiles", "JsonFiles\JsonFiles.csproj", "{B206A984-A52A-4B4F-89CD-53A382A0EEDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7E6FE7E1-EE9D-4A1E-A373-0E3302FD7C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E6FE7E1-EE9D-4A1E-A373-0E3302FD7C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E6FE7E1-EE9D-4A1E-A373-0E3302FD7C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B206A984-A52A-4B4F-89CD-53A382A0EEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B206A984-A52A-4B4F-89CD-53A382A0EEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B206A984-A52A-4B4F-89CD-53A382A0EEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B206A984-A52A-4B4F-89CD-53A382A0EEDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
