@@ -16,6 +16,8 @@
         <TextBox Name="putBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="185,216,0,0"/>
         <TextBlock HorizontalAlignment="Left" Margin="163,40,0,0" TextWrapping="Wrap" Text="Сумма для снятия: " VerticalAlignment="Top" FontSize="16" FontFamily="Segoe UI Black"/>
         <TextBlock HorizontalAlignment="Left" Margin="153,171,0,0" TextWrapping="Wrap" Text="Сумма для пополнения: " VerticalAlignment="Top" FontSize="16" FontFamily="Segoe UI Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,19,0,0" TextWrapping="Wrap" Text="Остаток: " VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Black"/>
+        <TextBox Name="moneyUser" HorizontalAlignment="Left" Height="23" Margin="98,18,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="47" Background="#FF33A447" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" FontSize="18" FontFamily="Segoe UI Black"/>
     </Grid>
     
 </Page>

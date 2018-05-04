@@ -27,6 +27,7 @@ namespace BanksSystem
         {
             InitializeComponent();
             this.user = user;
+            moneyUser.Text = user.Sum.ToString();
             account = new Account(user.Sum);
             account.RegisterHandler(new Account.AccountStateHandler(AddMoney),new Account.AccountStateHandler(LossMoney));
         }
@@ -34,27 +35,37 @@ namespace BanksSystem
         private void AddMoneyClick(object sender, RoutedEventArgs e)
         {
             double result;
+            double money;
             if (double.TryParse(putBox.Text, out result))
             {
-                account.Put(result,user);
+                account.Put(result, user);
+                money = double.Parse(moneyUser.Text);
+                money = money + result;
+                moneyUser.Text = money.ToString();
             }
             else
             {
                 MessageBox.Show("Неверные данные");
             }
+
         }
 
         private void LossMoneyClick(object sender, RoutedEventArgs e)
         {
             double result;
+            double money;
             if (double.TryParse(lostBox.Text, out result))
             {
                 account.Withdraw(result,user);
+                money = double.Parse(moneyUser.Text);
+                money = money - result;
+                moneyUser.Text = money.ToString();
             }
             else
             {
                 MessageBox.Show("Неверные данные");
             }
+       
         }
 
         private static string AddMoney(double sum, Account personSum,User user)
