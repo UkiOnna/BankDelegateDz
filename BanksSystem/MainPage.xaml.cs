@@ -56,12 +56,20 @@ namespace BanksSystem
         {
             double result;
             double money;
+            double temp;
             if (double.TryParse(lostBox.Text, out result))
             {
                 account.Withdraw(result,user);
                 money = double.Parse(moneyUser.Text);
-                money = money - result;
-                moneyUser.Text = money.ToString();
+                temp = money - result;
+                if (temp < 0)
+                {
+                    moneyUser.Text = money.ToString();
+                }
+                else
+                {
+                    moneyUser.Text = temp.ToString();
+                }
             }
             else
             {
@@ -118,7 +126,7 @@ namespace BanksSystem
 
         private void ExchangeRatesShowClick(object sender, RoutedEventArgs e)
         {
-            window.Content = new ExchangeRatePage(window); 
+            window.Content = new ExchangeRatePage(window,user); 
         }
     }
 }

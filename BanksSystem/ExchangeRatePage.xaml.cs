@@ -26,11 +26,13 @@ namespace BanksSystem
     public partial class ExchangeRatePage : Page
     {
         private Window window;
+        private User user;
         public static ObservableCollection<ValuteInfo> valutes { get; set; }
-        public ExchangeRatePage(Window win)
+        public ExchangeRatePage(Window win,User use)
         {
             InitializeComponent();
             window = win;
+            user = use;
             Thread threadFirst = new Thread(new ThreadStart(GetValueJson));
             threadFirst.Start();
             threadFirst.Join();
@@ -52,6 +54,16 @@ namespace BanksSystem
             valutes.Add(obj.Valute.JPY);
             valutes.Add(obj.Valute.KZT);
             valutes.Add(obj.Valute.USD);
-        }  
+
+            foreach(var a in valutes)
+            {
+                a.Value = a.Value / a.Nominal * 5.2357;
+            }
+        }
+
+        private void BackButtonClick(object sender, RoutedEventArgs e)
+        {
+            window.Content = new MainPage(user, window);
+        }
     }
 }
