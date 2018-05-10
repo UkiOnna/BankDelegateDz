@@ -9,7 +9,7 @@
       Title="ExchangeRatePage">
 
     <Grid>
-        <DataGrid Name="dataValutes" HorizontalAlignment="Left" Height="269" Margin="10,10,0,0" VerticalAlignment="Top" Width="505"/>
+        <DataGrid CanUserAddRows="False" Name="dataValutes" HorizontalAlignment="Left" Height="269" Margin="10,10,0,0" VerticalAlignment="Top" Width="505"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="33,284,0,0" VerticalAlignment="Top" Width="75" Click="BackButtonClick"/>
 
     </Grid>

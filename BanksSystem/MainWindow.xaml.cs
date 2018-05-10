@@ -24,11 +24,11 @@ namespace BanksSystem
         
         public MainWindow()
         {
-            using (var context = new BankContext())
-            {
-                Person pers = new Person { Id = 1, Name = "Alex" };
-                context.People.Add(pers);
-            }
+            //using (var context = new BankContext())
+            //{
+            //    Person pers = new Person { Id = 1, Name = "Alex" };
+            //    context.People.Add(pers);
+            //}
             InitializeComponent();
             Content = new SignInPage(this);
 
